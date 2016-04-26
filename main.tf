@@ -3,7 +3,7 @@ variable "atlas_token" {}
 variable "atlas_environment" {}
 
 resource "aws_instance" "web" {
-  count = 5
+  count = 3
   ami   = "${lookup(var.aws_amis, var.aws_region)}"
 
   instance_type = "t2.micro"
